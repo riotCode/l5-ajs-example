@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function()
+{
+    return view('home');
+});
 
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::resource('item', 'ItemController',
+                ['only' => ['index', 'show', 'create']]
+);
