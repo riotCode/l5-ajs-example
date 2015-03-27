@@ -35,8 +35,8 @@ class ItemController extends Controller {
 	public function store()
 	{
 		\App\Item::create([
-			'name' => Input::get('name'),
-			'description' => Input::get('description')
+			'name' => \Input::get('name'),
+			'description' => \Input::get('description')
 		]);
 
 		return \Response::json(['success' => true]);

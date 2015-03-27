@@ -1,6 +1,8 @@
 <?php
 
-class CommentTableSeeder extends Seeder 
+use Illuminate\Database\Seeder;
+
+class ItemTableSeeder extends Seeder 
 {
 
 	public function run()
@@ -17,5 +19,6 @@ class CommentTableSeeder extends Seeder
 			'name' => 'Fujifilm camera',
 			'description' => 'Crazy good pictures ahead.'
 		));
+	}
 
 }

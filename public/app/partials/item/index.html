@@ -1,21 +1,28 @@
-<div class="contentWrapper">
-	<div class="contentInnerWrapper">
-	<table>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2" ng-controller="ItemListCtrl">
+		<form novalidate class="add-item-form">
+			<div class="form-group">
+			    <label for="exampleName">Name</label>
+				<input type="text" class="form-control" id="exampleName" placeholder="Enter item name" ng-model="item.name">
+			</div>
+			<div class="form-group">
+			    <label for="exampleDescription">Description</label>
+				<input type="text" class="form-control" id="exampleDescription" placeholder="Enter item description" ng-model="item.description">
+			</div>
+			<button type="submit" class="btn btn-default" ng-click="update(item)">Submit</button>
+		</form>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+	<table class="table table-bordered">
 	<tr>
-	<th><div class="gap">Email</div></th>
-	<th>First Name</th>
-	<th>last name</th>
-	<th>Status</th>
-	<th>Created</th>
+	<th>Name</th>
+	<th>Description</th>
 	</tr>
 	<tr ng-repeat="data in items">
-	<td>
-	<div class="subTitle">{{data.email}}</div>
-	</td>
-	<td>{{data.first_name}}</td>
-	<td>{{data.last_name}}</td>
-	<td ng-show="data.activated">Activate</li><li ng-hide="data.activated">De-activate</li>
-	<td>{{data.created_at}}</li>
+		<td>{{data.name}}</td>
+		<td>{{data.description}}</td>
 	</tr>
 	</table>
 	</div>
