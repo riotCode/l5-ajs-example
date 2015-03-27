@@ -17,5 +17,5 @@ Route::get('/', function()
 });
 
 Route::resource('item', 'ItemController',
-                ['only' => ['index', 'show', 'create']]
+                ['only' => ['index', 'create', 'store']]
 );

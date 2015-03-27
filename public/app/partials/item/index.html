@@ -1,0 +1,22 @@
+<div class="contentWrapper">
+	<div class="contentInnerWrapper">
+	<table>
+	<tr>
+	<th><div class="gap">Email</div></th>
+	<th>First Name</th>
+	<th>last name</th>
+	<th>Status</th>
+	<th>Created</th>
+	</tr>
+	<tr ng-repeat="data in items">
+	<td>
+	<div class="subTitle">{{data.email}}</div>
+	</td>
+	<td>{{data.first_name}}</td>
+	<td>{{data.last_name}}</td>
+	<td ng-show="data.activated">Activate</li><li ng-hide="data.activated">De-activate</li>
+	<td>{{data.created_at}}</li>
+	</tr>
+	</table>
+	</div>
+</div>
